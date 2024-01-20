@@ -44,12 +44,10 @@ public class Main {
 
         try (Connection con = DriverManager.getConnection(DB_URL, props);
              PreparedStatement ps = con.prepareStatement(SQL_QUERY)) {
-
-            System.out.printf("DB connection created successfully: %s%n", DB_URL);
-
-            // 5. Execute prepared statement with parameter
-            ps.setDouble(1, salary);
-            ResultSet rs = ps.executeQuery();
+                 System.out.printf("DB connection created successfully: %s%n", DB_URL);
+                 // 5. Execute prepared statement with parameter
+                 ps.setDouble(1, salary);
+                 ResultSet rs = ps.executeQuery();
 
             // 6. Print results
             while(rs.next()) {
