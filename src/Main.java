@@ -8,7 +8,9 @@ public class Main {
     public static String SQL_QUERY = "SELECT * FROM employees WHERE salary > ?";
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Enter DB username (<Enter> for 'root'): ");
         String username = sc.nextLine().trim();
         username = username.length() > 0? username : "root";
